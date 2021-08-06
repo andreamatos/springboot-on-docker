@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql
+sudo docker pull mysql/mysql-server:latest
+
+docker run  --publish 6603:3306 --network mysql-network  --detach --name=mysql-docker -e MYSQL_ROOT_PASSWORD=adm -e MY_DATABASE=starbucks  -e MY_USER=root --volume=/root/docker/mysql-standalone/conf.d:/etc/mysql/conf.d mysql
+
+sudo docker exec -it mysql-docker bash
+
+mysql -uroot -p
+
+create database starbucks
+
+show databases;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+properties
+spring.datasource.url=jdbc:mysql://localhost:6603/starbucks
+spring.datasource.username=root
+spring.datasource.password=adm
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
