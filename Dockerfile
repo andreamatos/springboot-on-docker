@@ -1,3 +1,5 @@
 FROM openjdk:11
-COPY starbucks-api-1.0.0.jar /projetos/pessoal/starbucks-api/
-ENTRYPOINT ["java","-jar","starbucks-api-1.0.0.jar"]
+ARG JAR_FILE=target/starbucks-api-1.0.0-exec.jar
+COPY ${JAR_FILE} app.jar
+EXPOSE 9600
+CMD ["./app.jar"]
