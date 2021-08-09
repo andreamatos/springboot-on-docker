@@ -1,6 +1,6 @@
 /home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/controller/BebidasController.java
-/home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/config/SwaggerConfiguration.java
 /home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/service/BebidasService.java
-/home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/config/StarbucksApiApplication.java
+/home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/SwaggerConfiguration.java
 /home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/repository/BebidasRepository.java
+/home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/StarbucksApiApplication.java
 /home/andre.matos/projetos/pessoal/starbucks-api/src/main/java/com/project/starbucksapi/model/Bebidas.java
