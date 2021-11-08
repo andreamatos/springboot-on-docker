@@ -89,12 +89,10 @@ SPRINGBOOT
         </plugins>
     </build>
 
-2.
-clean install maven
+2. clean install maven
 incluir .jar gerado na pasta desejada
 
-3.
-criar Dockerfile na raiz do projeto
+3. criar Dockerfile na raiz do projeto
 
 FROM openjdk:11
 ARG JAR_FILE=target/starbucks-api-1.0.0-exec.jar
@@ -102,8 +100,7 @@ COPY ${JAR_FILE} app.jar
 EXPOSE 9600
 CMD ["./app.jar"]
 
-4.
-executar comando na pasta do jar(/projetos/pessoal/starbucks-api)
+4. executar comando na pasta do jar(/projetos/pessoal/starbucks-api)
 starbucks -> neste caso é o nome da imagem docker
 sudo docker build -t starbucks .
 
@@ -130,6 +127,5 @@ Removing intermediate container 06b6a2b588cc
 Successfully built 01ac3848f855
 Successfully tagged starbucks:latest
 
-5.
-executar a imagem criada
+5. executar a imagem criada
 docker run -p 8089:8089 --network mysql-network -d --name starbucks-api starbucks
