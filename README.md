@@ -1,13 +1,23 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-mysql
+MYSQL
+
 sudo docker pull mysql/mysql-server:latest
+
 docker  network create --driver bridge mysql-network
+
 docker run -p 6603:3306 --network mysql-network --detach --name=mysql-docker -e MYSQL_ROOT_PASSWORD=adm -e MY_DATABASE=starbucks -e MY_USER=root mysql
+
 sudo docker exec -it mysql-docker bash
+
 mysql -uroot -p
+
 create database starbucks
+
 show databases;
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROPERTIES
+
 properties -> para comunicar na maquina local
 server.port=8089
 spring.datasource.url=jdbc:mysql://127.0.0.1:6603/starbucks
@@ -25,7 +35,7 @@ spring.jpa.hibernate.ddl-auto = update
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-springboot
+SPRINGBOOT
 
 1. alterar pom para gerar exec
     <build>
