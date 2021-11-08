@@ -1,17 +1,11 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 mysql
 sudo docker pull mysql/mysql-server:latest
-
 docker  network create --driver bridge mysql-network
-
 docker run -p 6603:3306 --network mysql-network --detach --name=mysql-docker -e MYSQL_ROOT_PASSWORD=adm -e MY_DATABASE=starbucks -e MY_USER=root mysql
-
 sudo docker exec -it mysql-docker bash
-
 mysql -uroot -p
-
 create database starbucks
-
 show databases;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 properties -> para comunicar na maquina local
@@ -112,6 +106,6 @@ Removing intermediate container 06b6a2b588cc
 Successfully built 01ac3848f855
 Successfully tagged starbucks:latest
 
-4.
+5.
 executar a imagem criada
 docker run -p 8089:8089 --network mysql-network -d --name starbucks-api starbucks
