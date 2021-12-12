@@ -37,7 +37,6 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ## Springboot Container Properties
 
 ```java
-properties -> para quando for subir um container do service
 server.port=8089
 spring.datasource.url=jdbc:mysql://mysql-docker:3306/starbucks
 spring.datasource.username=root
