@@ -90,22 +90,29 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
 ## Clean and install maven
 
-To generate api .jar
+```java
+Generate api .jar
+```
 
 ## Creating DockerFile
 
+```java
 FROM openjdk:11
 ARG JAR_FILE=target/starbucks-api-1.0.0-exec.jar
 COPY ${JAR_FILE} app.jar
 EXPOSE 9600
 CMD ["./app.jar"]
+```
 
 ## Execute this command on jar folder(/projetos/pessoal/starbucks-api)
 
+```java
 sudo docker build -t starbucks .
+```
 
 ## Log execution
 
+```java
 andre.matos@dxtcps010065:~/projetos/pessoal/starbucks-api$ docker build -t starbucks .
 Sending build context to Docker daemon  136.5MB
 Step 1/5 : FROM openjdk:11
@@ -126,6 +133,7 @@ Removing intermediate container 06b6a2b588cc
  ---> 01ac3848f855
 Successfully built 01ac3848f855
 Successfully tagged starbucks:latest
+```
 
 ## Run Docker Image
 ```java
