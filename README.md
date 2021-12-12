@@ -23,7 +23,7 @@ create database starbucks
 show databases;
 ```
 
-## SpringBoot Local Properties
+## Springboot Local Properties
 
 ```java
 server.port=8089
@@ -32,9 +32,11 @@ spring.datasource.username=root
 spring.datasource.password=adm
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+```
 
-## SpringBoot Container Properties
+## Springboot Container Properties
 
+```java
 properties -> para quando for subir um container do service
 server.port=8089
 spring.datasource.url=jdbc:mysql://mysql-docker:3306/starbucks
@@ -43,7 +45,6 @@ spring.datasource.password=adm
 spring.jpa.hibernate.ddl-auto = update
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
-
 ```
 
 ## Pom.xml
@@ -87,10 +88,11 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
     </build>
 ```
 
-2. clean install maven
-incluir .jar gerado na pasta desejada
+## Clean and install maven
 
-3. criar Dockerfile na raiz do projeto
+To generate api .jar
+
+## Creating DockerFile
 
 FROM openjdk:11
 ARG JAR_FILE=target/starbucks-api-1.0.0-exec.jar
@@ -98,11 +100,11 @@ COPY ${JAR_FILE} app.jar
 EXPOSE 9600
 CMD ["./app.jar"]
 
-4. executar comando na pasta do jar(/projetos/pessoal/starbucks-api)
-starbucks -> neste caso é o nome da imagem docker
+## Execute this command on jar folder(/projetos/pessoal/starbucks-api)
+
 sudo docker build -t starbucks .
 
-log da execução;
+## Log execution
 
 andre.matos@dxtcps010065:~/projetos/pessoal/starbucks-api$ docker build -t starbucks .
 Sending build context to Docker daemon  136.5MB
@@ -125,5 +127,5 @@ Removing intermediate container 06b6a2b588cc
 Successfully built 01ac3848f855
 Successfully tagged starbucks:latest
 
-5. executar a imagem criada
+## Run Docker Image
 docker run -p 8089:8089 --network mysql-network -d --name starbucks-api starbucks
