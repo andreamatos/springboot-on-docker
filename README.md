@@ -11,7 +11,10 @@ To create a mysql container to use with springboot do the commands bellow;
 ```java
 sudo docker pull mysql/mysql-server:latest
 docker  network create --driver bridge mysql-network
-docker run -p 6603:3306 --network mysql-network --detach --name=mysql-docker -e MYSQL_ROOT_PASSWORD=adm -e MY_DATABASE=starbucks -e MY_USER=root mysql
+
+docker run -p 6603:3306 --network mysql-network --detach --name=mysql-docker 
+   -e MYSQL_ROOT_PASSWORD=adm -e MY_DATABASE=starbucks -e MY_USER=root mysql
+   
 sudo docker exec -it mysql-docker bash
 mysql -uroot -p
 create database starbucks
