@@ -3,10 +3,10 @@
   <img src="https://geekflare.com/wp-content/uploads/2020/03/docker-security-495x160.jpg" />
 </p>
 
-## Objective.
+## Objective
   Simple api that shows two containers, Springboot and Mysql that comunicate each other. 
 
-## MySql Commands.
+## MySql Commands
 
 To create a mysql container to use with springboot do the commands bellow;
 
@@ -128,4 +128,6 @@ Successfully built 01ac3848f855
 Successfully tagged starbucks:latest
 
 ## Run Docker Image
+```java
 docker run -p 8089:8089 --network mysql-network -d --name starbucks-api starbucks
+```
