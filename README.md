@@ -23,7 +23,7 @@ create database starbucks
 show databases;
 ```
 
-## SpringBoot properties
+## SpringBoot Local Properties
 
 ```java
 server.port=8089
@@ -32,6 +32,9 @@ spring.datasource.username=root
 spring.datasource.password=adm
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+
+## SpringBoot Container Properties
+
 properties -> para quando for subir um container do service
 server.port=8089
 spring.datasource.url=jdbc:mysql://mysql-docker:3306/starbucks
@@ -43,10 +46,9 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
 ```
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-SPRINGBOOT
+## Pom.xml
 
-1. alterar pom para gerar exec
+```java
     <build>
         <plugins>
             <plugin>
@@ -83,6 +85,7 @@ SPRINGBOOT
             </plugin>
         </plugins>
     </build>
+```
 
 2. clean install maven
 incluir .jar gerado na pasta desejada
