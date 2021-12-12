@@ -23,38 +23,25 @@ create database starbucks
 show databases;
 ```
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-PROPERTIES
+## SpringBoot properties
 
-properties -> para comunicar na maquina local
-
+```java
 server.port=8089
-
 spring.datasource.url=jdbc:mysql://127.0.0.1:6603/starbucks
-
 spring.datasource.username=root
-
 spring.datasource.password=adm
-
 spring.jpa.hibernate.ddl-auto = update
-
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
-
 properties -> para quando for subir um container do service
-
 server.port=8089
-
 spring.datasource.url=jdbc:mysql://mysql-docker:3306/starbucks
-
 spring.datasource.username=root
-
 spring.datasource.password=adm
-
 spring.jpa.hibernate.ddl-auto = update
-
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+
+```
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SPRINGBOOT
