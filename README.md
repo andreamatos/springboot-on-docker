@@ -1,3 +1,8 @@
+<p align=center>
+  <strong>Kitsu API</strong> <br>
+  <img src="https://geekflare.com/wp-content/uploads/2020/03/docker-security-495x160.jpg" />
+</p>
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 MYSQL
 
