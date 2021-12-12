@@ -3,7 +3,9 @@
   <img src="https://geekflare.com/wp-content/uploads/2020/03/docker-security-495x160.jpg" />
 </p>
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Objective.
+  Simple api that shows two containers, Springboot and Mysql that comunicate each other. 
+
 ## MySql Commands.
 
 To create a mysql container to use with springboot do the commands bellow;
