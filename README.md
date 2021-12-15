@@ -1,5 +1,5 @@
+# SpringBoot on Container
 <p align=center>
-  <strong>SpringBoot on Container</strong> <br>
   <img src="https://github.com/andreamatos/springboot-on-container/blob/master/docker_image1.jpeg" />
 </p>
 
