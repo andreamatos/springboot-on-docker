@@ -93,7 +93,7 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 Generate api .jar
 ```
 
-## Creating DockerFile
+## Create DockerFile
 
 ```java
 FROM openjdk:11
