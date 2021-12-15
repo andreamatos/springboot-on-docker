@@ -1,7 +1,5 @@
 ## Springboot on Container
-<p align=center>
-  <img src="https://github.com/andreamatos/springboot-on-container/blob/master/docker_image1.jpeg" />
-</p>
+![image](https://user-images.githubusercontent.com/42948627/146280938-ec413378-ca08-4f11-968e-77cd7c8338e2.png)
 
 ## Objective
   Simple api that shows two containers, Springboot and Mysql that comunicate each other. 
@@ -10,7 +8,7 @@
 
 To create a mysql container to use with springboot do the commands bellow;
 
-```java
+```
 sudo docker pull mysql/mysql-server:latest
 docker  network create --driver bridge mysql-network
 
@@ -25,7 +23,7 @@ show databases;
 
 ## Springboot Local Properties
 
-```java
+```
 server.port=8089
 spring.datasource.url=jdbc:mysql://127.0.0.1:6603/starbucks
 spring.datasource.username=root
@@ -48,7 +46,7 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
 ## Pom.xml
 
-```java
+```
     <build>
         <plugins>
             <plugin>
@@ -89,13 +87,13 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
 ## Clean and install maven
 
-```java
+```
 Generate api .jar
 ```
 
 ## Create DockerFile
 
-```java
+```
 FROM openjdk:11
 ARG JAR_FILE=target/starbucks-api-1.0.0-exec.jar
 COPY ${JAR_FILE} app.jar
@@ -105,13 +103,13 @@ CMD ["./app.jar"]
 
 ## Execute this command on jar folder(/projetos/pessoal/starbucks-api)
 
-```java
+```
 sudo docker build -t starbucks .
 ```
 
 ## Log execution
 
-```java
+```
 andre.matos@dxtcps010065:~/projetos/pessoal/starbucks-api$ docker build -t starbucks .
 Sending build context to Docker daemon  136.5MB
 Step 1/5 : FROM openjdk:11
@@ -135,6 +133,6 @@ Successfully tagged starbucks:latest
 ```
 
 ## Run Docker Image
-```java
+```
 docker run -p 8089:8089 --network mysql-network -d --name starbucks-api starbucks
 ```
