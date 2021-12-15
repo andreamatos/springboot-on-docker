@@ -1,6 +1,6 @@
 <p align=center>
   <strong>SpringBoot on Container</strong> <br>
-  <img src="https://geekflare.com/wp-content/uploads/2020/03/docker-security-495x160.jpg" />
+  <img src="https://github.com/andreamatos/springboot-on-container/blob/master/docker_image1.jpeg" />
 </p>
 
 ## Objective
