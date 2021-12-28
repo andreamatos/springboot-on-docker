@@ -17,6 +17,7 @@ docker run -p 6603:3306 --network mysql-network --detach --name=mysql-docker
    
 sudo docker exec -it mysql-docker bash
 mysql -uroot -p
+password: adm
 create database starbucks
 show databases;
 ```
